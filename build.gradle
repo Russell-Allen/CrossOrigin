@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'CrossOrigin', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.7'
+    compile group: 'org.springframework', name: 'spring-core', version: '4.0.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version: '4.0.2.RELEASE'
+}
+
