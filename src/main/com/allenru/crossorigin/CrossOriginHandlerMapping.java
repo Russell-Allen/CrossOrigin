@@ -24,8 +24,13 @@ import org.springframework.web.servlet.mvc.condition.NameValueExpression;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
-import com.aebn.commonrs.auth.cors.ServiceDefinition.RestService;
-
+/**
+ * {@link CrossOriginHandlerMapping} extends Spring's {@link RequestMappingHandlerMapping} class and 
+ * enables support for CORS requests.  Most importantly, it watches for request methods that are 
+ * annotated with {@link CrossOrigin}, and then registers a 'mirror' request handler method (created
+ * here) to handle the OPTIONS request used by browsers for pre-flighting CORS requests.
+ *
+ */
 class CrossOriginHandlerMapping extends RequestMappingHandlerMapping {
 
 	private final Method corsMethod;

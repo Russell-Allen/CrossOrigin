@@ -8,6 +8,11 @@ import java.lang.annotation.Target;
 
 import org.springframework.context.annotation.Import;
 
+/**
+ * Apply this annotation to a Spring Java Configuration class so that this library may
+ * properly configure itself.  See {@link CrossOriginConfiguration} for exactly what
+ * this involves.
+ */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
