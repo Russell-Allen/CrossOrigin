@@ -1,6 +1,12 @@
 # @CrossOrigin
 ### An annotation based approach to CORS support for Spring based projects.
 
+## DEPRICATED
+
+This library has worked well in production site for nearly two years, but alas, [Spring Framework version 4.2 now supports CORS requests](http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#cors).  Their implementation is partially based off of this work, and I recommend using Spring’s built in support over a 3rd party library (like this) when possible.
+
+If you are unable to use version 4.2 or later of Spring, then feel free to use this library for your CORS needs.
+
 ## Overview
 
 Browsers have adopted the [Cross-Origin Request Scripting (CORS)](http://www.html5rocks.com/en/tutorials/cors/) standard as a way of protecting the user from malicious sites.  When the browser detects that the current page is making a request to an 'origin' other than where that page was loaded, the browser applies some rules to decide if it will allow the request.  This is particularly important when the page is asking the browser to send any cookies associated to the other site or add custom headers on the request.  Imagine the havoc if any page you viewed could ask the browser to send a money-transfer request to your bank and the browser blindly sent your session cookie along with it.
